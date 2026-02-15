@@ -1,4 +1,1 @@
-# My Portfolio
-
-Personal portfolio website.
-WORK IN PROGRESS
+I don't know what goes here, but if you have questions or suggestion, email me at pnikul165@gmail.com
