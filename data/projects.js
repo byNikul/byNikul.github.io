@@ -242,7 +242,7 @@ Feel free to explore the live site above and see the work firsthand. If you have
 
     detailHTML: `<h2>Overview</h2>
 
-    <h3>-----WILL UPLOAD MORE MODELS SOON-----</h3>
+    <h3>--WILL UPLOAD MORE MODELS SOON--</h3>
 <p>
 This project focused on solving advanced parametric CAD challenges from the past SOLIDWORKS Model Mania® competition. The objective is to rapidly model complex mechanical components from 2D drawings while maintaining strict dimensional accuracy, design intent, and modification flexibility.
 </p>
@@ -274,9 +274,16 @@ This practice significantly strengthened my ability to think like a mechanical d
 </p>`,
 
       media: [
-        { type: "sketchfab", src: "https://sketchfab.com/models/dae45764074d4578974796ae7e8b13db/embed", label: "Model Mania Challange Year 2000" },
-        { type: "sketchfab", src: "https://sketchfab.com/models/4b3e6f6b30be469395fd7f0869360870/embed", label: "Model Mania Challange Year 2001" },
-        { type: "sketchfab", src: "https://sketchfab.com/models/6ba45e59c82b4f1b90dd2bc6ce89f8ec/embed", label: "Model Mania Challange Year 2002" }
+        { type: "sketchfab", src: "https://sketchfab.com/models/953dd174f9974e5d8ffcb8142b0f738d/embed", label: "Model Mania Challange Year 2000 Phase 1" },
+        { type: "sketchfab", src: "https://sketchfab.com/models/f37feab56b7545d6936064cdd8c11b58/embed", label: "Model Mania Challange Year 2000 Phase 2" },
+        { type: "sketchfab", src: "https://sketchfab.com/models/66d865280cc7495d868a55a442e16499/embed", label: "Model Mania Challange Year 2001 Phase 1" },
+        { type: "sketchfab", src: "https://sketchfab.com/models/bd5c6a26b017411083a42fcb77556969/embed", label: "Model Mania Challange Year 2001 Phase 2" },
+        { type: "sketchfab", src: "https://sketchfab.com/models/5d4b0e20e80f429c9d4c5a85a70088f4/embed", label: "Model Mania Challange Year 2002 Phase 1" },
+        { type: "sketchfab", src: "https://sketchfab.com/models/103cf62c9039444f97fc31e0d04c263c/embed", label: "Model Mania Challange Year 2002 Phase 2B" },
+        { type: "sketchfab", src: "https://sketchfab.com/models/f0ef61ed83dc44f3b200c71bae53183f/embed", label: "Model Mania Challange Year 2002 Phase 2C" },
+        { type: "sketchfab", src: "https://sketchfab.com/models/3ad10f9e42d14081b323efcb543fa78f/embed", label: "Model Mania Challange Year 2002 Phase 2D" },
+        { type: "sketchfab", src: "https://sketchfab.com/models/bceba2d6b690439b932efc52a1e61397/embed", label: "Model Mania Challange Year 2003 Phase 1" },
+        { type: "sketchfab", src: "https://sketchfab.com/models/24d459a510f640cea27b65921498faaf/embed", label: "Model Mania Challange Year 2003 Phase 2" }
       ],
 
     attachments: [
@@ -336,7 +343,7 @@ Material selection was intentional:
 </ul>
 
 <p>
-This project strengthened my ability to think beyond CAD modeling and focus on manufacturability, risk mitigation, and material behavior. Designing under hackathon pressure required balancing speed, structural integrity, aesthetic creativity, and real-world print constraints — an exercise in practical mechanical engineering rather than purely aesthetic design.
+This project strengthened my ability to think beyond CAD modeling and focus on manufacturability, risk mitigation, and material behavior. Designing under hackathon pressure required balancing speed, structural integrity, aesthetic creativity, and real-world print constraints, an exercise in practical mechanical engineering rather than purely aesthetic design.
 </p>`,
 
     media: [
