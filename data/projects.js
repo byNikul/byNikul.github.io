@@ -274,16 +274,13 @@ This practice significantly strengthened my ability to think like a mechanical d
 </p>`,
 
       media: [
-        { type: "sketchfab", src: "https://sketchfab.com/models/953dd174f9974e5d8ffcb8142b0f738d/embed", label: "Model Mania Challange Year 2000 Phase 1" },
         { type: "sketchfab", src: "https://sketchfab.com/models/f37feab56b7545d6936064cdd8c11b58/embed", label: "Model Mania Challange Year 2000 Phase 2" },
-        { type: "sketchfab", src: "https://sketchfab.com/models/66d865280cc7495d868a55a442e16499/embed", label: "Model Mania Challange Year 2001 Phase 1" },
         { type: "sketchfab", src: "https://sketchfab.com/models/bd5c6a26b017411083a42fcb77556969/embed", label: "Model Mania Challange Year 2001 Phase 2" },
         { type: "sketchfab", src: "https://sketchfab.com/models/5d4b0e20e80f429c9d4c5a85a70088f4/embed", label: "Model Mania Challange Year 2002 Phase 1" },
-        { type: "sketchfab", src: "https://sketchfab.com/models/103cf62c9039444f97fc31e0d04c263c/embed", label: "Model Mania Challange Year 2002 Phase 2B" },
-        { type: "sketchfab", src: "https://sketchfab.com/models/f0ef61ed83dc44f3b200c71bae53183f/embed", label: "Model Mania Challange Year 2002 Phase 2C" },
-        { type: "sketchfab", src: "https://sketchfab.com/models/3ad10f9e42d14081b323efcb543fa78f/embed", label: "Model Mania Challange Year 2002 Phase 2D" },
-        { type: "sketchfab", src: "https://sketchfab.com/models/bceba2d6b690439b932efc52a1e61397/embed", label: "Model Mania Challange Year 2003 Phase 1" },
-        { type: "sketchfab", src: "https://sketchfab.com/models/24d459a510f640cea27b65921498faaf/embed", label: "Model Mania Challange Year 2003 Phase 2" }
+        { type: "sketchfab", src: "https://sketchfab.com/models/24d459a510f640cea27b65921498faaf/embed", label: "Model Mania Challange Year 2003 Phase 2" },
+        { type: "sketchfab", src: "https://sketchfab.com/models/a61d88c7bafe470ea3129179c2770b86/embed", label: "Model Mania Challange Year 2004 Phase 2" },
+        { type: "sketchfab", src: "https://sketchfab.com/models/2648ce4a717448b0bca068dee78653a1/embed", label: "Model Mania Challange Year 2005 Phase 2" },
+        { type: "sketchfab", src: "https://sketchfab.com/models/04a08f17703345e6904d5b77e266ef70/embed", label: "Model Mania Challange Year 2006 Phase 2" }
       ],
 
     attachments: [
