@@ -315,7 +315,7 @@ body::before {
 .bio {
   margin-top: 15px;
   max-width: 1000px;
-  font-size: 1.0rem;
+  font-size: 0.95rem;
   line-height: 1.7;
   opacity: 0.9;
 }
@@ -348,7 +348,7 @@ body::before {
 }
 
 .projects-disclaimer {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   opacity: 0.6;
   margin-left: 15px;
   margin-top: 3px;

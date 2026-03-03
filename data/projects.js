@@ -54,7 +54,7 @@ const projects = [
     subtitle: "MATLAB-Based Game System Architecture",
     years: [2025],
     tags: ["matlab", "simulink"],
-    thumbnail: "assets/thumbnails/jeopardy-clashroyale.png",
+    thumbnail: "assets/thumbnails/jeopardy-clashroyale.jpg",
 
     summary:
       "Interactive MATLAB-based game system combining App Designer UI architecture with Simulink-driven logic and synchronized multimedia effects.",
