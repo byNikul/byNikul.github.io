@@ -236,8 +236,9 @@ body::before {
 }
 
 .project-text h1 {
-  font-size: 2.0rem;
+  font-size: 1.9rem;
   font-weight: 600;
+  opacity: 0.95;
   margin-bottom: 20px;
   letter-spacing: -0.015em;
   color: #f8fafc;
@@ -257,8 +258,9 @@ body::before {
 }
 
 .project-text h2 {
-  font-size: 1.9rem;
+  font-size: 1.75rem;
   font-weight: 600;
+  opacity: 0.95;
   margin-bottom: 20px;
   letter-spacing: -0.015em;
   color: #f8fafc;
@@ -282,13 +284,19 @@ body::before {
   opacity: 0.9;
 }
 
+.project-detail {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
 /* =========================
    ATTACHMENTS SECTION
 ========================= */
 
 .project-detail .attachments-title {
-  font-size: 2.0rem;
+  font-size: 1.75rem;
   font-weight: 600;
+  opacity: 0.95;
   margin-bottom: 20px;
   letter-spacing: -0.015em;
   color: #f8fafc;

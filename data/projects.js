@@ -14,6 +14,7 @@ const DOMAINS = {
 // ================================
 const TAGS = {
   cad: { label: "CAD", domain: "hardware" },
+  fea: { label: "FEA", domain: "hardware" },
   printing3d: { label: "3D PRINTING", domain: "hardware" },
 
   matlab: { label: "MATLAB", domain: "systems" },
@@ -234,7 +235,7 @@ Feel free to explore the live site above and see the work firsthand. If you have
     title: "Parametric CAD Challenges",
     subtitle: "High-Speed Parametric CAD Challenges",
     years: [2025, 2026],
-    tags: ["cad"],
+    tags: ["cad", "fea"],
     thumbnail: "assets/thumbnails/solidworks-model-mania.png",
 
     summary:
@@ -280,7 +281,14 @@ This practice significantly strengthened my ability to think like a mechanical d
         { type: "sketchfab", src: "https://sketchfab.com/models/24d459a510f640cea27b65921498faaf/embed", label: "Model Mania Challange Year 2003 Phase 2" },
         { type: "sketchfab", src: "https://sketchfab.com/models/a61d88c7bafe470ea3129179c2770b86/embed", label: "Model Mania Challange Year 2004 Phase 2" },
         { type: "sketchfab", src: "https://sketchfab.com/models/2648ce4a717448b0bca068dee78653a1/embed", label: "Model Mania Challange Year 2005 Phase 2" },
-        { type: "sketchfab", src: "https://sketchfab.com/models/04a08f17703345e6904d5b77e266ef70/embed", label: "Model Mania Challange Year 2006 Phase 2" }
+        { type: "sketchfab", src: "https://sketchfab.com/models/04a08f17703345e6904d5b77e266ef70/embed", label: "Model Mania Challange Year 2006 Phase 2" },
+        { type: "sketchfab", src: "https://sketchfab.com/models/4e5e083e4d6942f98b80b5460f8055d1/embed", label: "Model Mania Challange Year 2007 Phase 2" },
+        { type: "sketchfab", src: "https://sketchfab.com/models/6eb9548f6f4943f8afefe9ad79b90085/embed", label: "Model Mania Challange Year 2008 Phase 2" },
+        {type:"pdf", src:"assets/media/pdfs/solidworks-model-mania1.pdf", label:"Solidworks SimExpress Study 2008 Phase 2"},
+        { type: "sketchfab", src: "https://sketchfab.com/models/af23c09f140449389042c7e066e2214c/embed", label: "Model Mania Challange Year 2009 Phase 1" },
+        {type:"pdf", src:"assets/media/pdfs/solidworks-model-mania2.pdf", label:"Solidworks SimExpress Study 2009 Phase 2"},
+        { type: "sketchfab", src: "https://sketchfab.com/models/67c1a5534ad14803b2af969f999e05ee/embed", label: "Model Mania Challange Year 2010 Phase 2" },
+        {type:"pdf", src:"assets/media/pdfs/solidworks-model-mania3.pdf", label:"Solidworks SimExpress Study 2010 Phase 2"}
       ],
 
     attachments: [
