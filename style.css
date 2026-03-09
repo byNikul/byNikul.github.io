@@ -294,7 +294,7 @@ body::before {
 .about-me h1 {
   font-size: 2.0rem;
   font-weight: 600;
-  opacity: 0.70;
+  opacity: 0.95;
   margin-bottom: 15px;
   letter-spacing: -0.015em;
   color: #f8fafc;
@@ -330,7 +330,7 @@ body::before {
 .projects h2 {
   font-size: 2.0rem;
   font-weight: 600;
-  opacity: 0.70;
+  opacity: 0.95;
   margin-bottom: 0px;
   letter-spacing: -0.015em;
   color: #f8fafc;
