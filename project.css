@@ -235,7 +235,7 @@ body::before {
 }
 
 .project-text h1 {
-  font-size: 1.9rem;
+  font-size: 2.0rem;
   font-weight: 600;
   opacity: 0.95;
   margin-bottom: 20px;
@@ -257,7 +257,7 @@ body::before {
 }
 
 .project-text h2 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 600;
   opacity: 0.95;
   margin-bottom: 20px;
@@ -293,7 +293,7 @@ body::before {
 ========================= */
 
 .project-detail .attachments-title {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 600;
   opacity: 0.95;
   margin-bottom: 20px;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +8,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cursor.css">
 </head>
 
 <body>
@@ -17,7 +19,7 @@
     <span class="hud-ring r1"></span>
     <span class="hud-ring r2"></span>
     <span class="hud-ring r3"></span>
-    
+
     <span class="star-field"></span>
     <span class="scan-pulse"></span>
 
@@ -27,7 +29,11 @@
 
   <!-- HEADER -->
   <header class="header">
-    <div class="logo"><a href="https://www.youtube.com/watch?v=oHg5SJYRHA0" style="text-decoration: none;" target="_blank">Nikul Patel</a></div>
+    <div class="logo-wrapper" style="display: flex; align-items: baseline; gap: 12px;">
+      <div class="logo"><a href="https://www.youtube.com/watch?v=oHg5SJYRHA0" style="text-decoration: none;"
+          target="_blank">Nikul Patel</a></div>
+      <span id="name-translation" class="name-translation">/nɪˈkul/</span>
+    </div>
     <nav class="nav">
       <a href="https://www.linkedin.com/in/n1kul" target="_blank">LinkedIn</a>
       <a href="data/Resume-Nikul_Patel.pdf" target="_blank">Resume</a>
@@ -54,8 +60,9 @@
     <h2>Projects</h2>
 
     <p class="projects-disclaimer">
-  * Thumbnail images are AI-generated to match the website’s visual theme and may not reflect the actual project visuals.<br>
-    Currently working, will update with larger projects as I get time. +_+
+      * Thumbnail images are AI-generated to match the website’s visual theme and may not reflect the actual project
+      visuals.<br>
+      Currently working, will update with larger projects as I get time. +_+
     </p>
 
 
@@ -71,7 +78,12 @@
 
   <script src="data/projects.js"></script>
   <script src="script.js"></script>
-  
+
+  <!-- CUSTOM CURSOR -->
+  <div id="custom-cursor">
+    <div class="cursor-coords"></div>
+  </div>
+  <script src="cursor.js"></script>
 </body>
 
 <!-- 🚧 TEMP WORK-IN-PROGRESS BAR (Remove this entire block later) -->

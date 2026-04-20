@@ -1,0 +1,64 @@
+/* =========================
+   CUSTOM CURSOR
+========================= */
+:root {
+  --ease-cinematic: cubic-bezier(0.25, 1, 0.5, 1);
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+  *,
+  *::before,
+  *::after {
+    cursor: none !important;
+  }
+}
+
+/* Custom Cursor Styling */
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #22d3ee;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  box-shadow: 0 0 10px #22d3ee;
+  transition:
+    transform 0.5s var(--ease-cinematic),
+    width 0.5s var(--ease-cinematic),
+    height 0.5s var(--ease-cinematic),
+    background-color 0.5s var(--ease-cinematic),
+    box-shadow 0.5s var(--ease-cinematic),
+    opacity 0.5s var(--ease-cinematic);
+  will-change: transform, width, height, opacity;
+}
+
+#custom-cursor.is-hover {
+  width: 32px;
+  height: 32px;
+  background-color: rgba(168, 85, 247, 0.15);
+  border: 1px solid #a855f7;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+}
+
+.cursor-coords {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  padding: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.45rem;
+  color: #22d3ee;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s var(--ease-cinematic);
+  pointer-events: none;
+}
+
+#custom-cursor.is-moving .cursor-coords {
+  opacity: 0.75;
+}

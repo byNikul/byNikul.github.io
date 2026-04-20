@@ -1,4 +1,22 @@
 // =====================
+// NAME TRANSLATION ANIMATION
+// =====================
+const translations = ["/nɪˈkul/", "નિકુલ", "ニクル", "Никул", "निकुल", "نيكول", "니쿨", "尼库尔", "Νίκουλ"];
+const translationEl = document.getElementById("name-translation");
+
+if (translationEl) {
+  let currentIndex = 0;
+  setInterval(() => {
+    translationEl.classList.add("hidden");
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % translations.length;
+      translationEl.textContent = translations[currentIndex];
+      translationEl.classList.remove("hidden");
+    }, 800); // wait for fade out
+  }, 4000); // cycle every 4 seconds
+}
+
+// =====================
 // HEADER SCROLL (SAFE)
 // =====================
 const header = document.querySelector(".header");
