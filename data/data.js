@@ -30,20 +30,10 @@ const TAGS = {
   github: { label: "GITHUB", domain: "product" }
 };
 
-
-
-
-
-
 // ================================
 // 🖼️ MEDIA PLACEHOLDER [Temporary]
 // ================================
 const PLACEHOLDER_IMAGE = "assets/images/project-placeholder.jpg";
-
-
-
-
-
 
 // ============================================================================================
 // 🚀 PROJECT DATA
@@ -174,7 +164,7 @@ This project strengthened my understanding of deep learning system design beyond
   {
     id: "portfolio-website",
     title: "Portfolio Website",
-  subtitle: "YOU'RE ON IT RIGHT NOW! GO EXPLORE IT AND SEE THE CODE ON GITHUB!!",
+    subtitle: "YOU'RE ON IT RIGHT NOW! GO EXPLORE IT AND SEE THE CODE ON GITHUB!!",
     years: [2025, 2026],
     tags: ["web", "github"],
     thumbnail: "assets/thumbnails/portfolio-website.png",
@@ -296,7 +286,7 @@ This practice significantly strengthened my ability to think like a mechanical d
     ]
   },
 
-{
+  {
     id: "home-me",
     title: "HomeMe",
     subtitle: "48-Hour Hackathon Project",
@@ -362,28 +352,6 @@ This project strengthened my ability to think beyond CAD modeling and focus on m
       {label: "CAD Files (.zip)", src: "assets/attachments/zips/home-me.zip"},
       {label: "Hackathon Submission Page (Webpage)", src: "https://devpost.com/software/home-me-76dsv8"}
     ]
-  }//,
-
-  //{
-   // id: "spacecraft-5dof-testbed",
-    //title: "5-DOF Spacecraft Dynamics Testbed",
-    //subtitle: "Experimental Air-Bearing Platform",
-    //years: [2026],
-    //tags: ["cad", "printing3d", "research"],
-    //thumbnail: "assets/thumbnails/spacecraft-5dof-testbed.png",
-
-    //summary:
-      //"Laboratory-scale spacecraft dynamics testbed for hardware-in-the-loop control validation.",
-
-    //detailHTML: `...`,
-
-    //media: [
-      //{ type: "image", src: PLACEHOLDER_IMAGE, label: "Label goes here" },
-      //{ type: "sketchfab", src: "https://sketchfab.com/models/71e352c8bf7541888cd41959703201e4/embed", label: "Label goes here" }
-    //],
-
-    //attachments: []
-  //}
-
+  }
 ];
 

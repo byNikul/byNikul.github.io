@@ -204,3 +204,26 @@ document.addEventListener("click", e => {
 renderTagFilters();
 renderYearFilters();
 renderProjects();
+
+// =====================
+// LIVE STATUS TYPEWRITER
+// =====================
+function typeWriter(element, text, speed = 50) {
+  let i = 0;
+  element.textContent = "";
+  function type() {
+    if (i < text.length) {
+      element.textContent += text.charAt(i);
+      i++;
+      setTimeout(type, speed);
+    }
+  }
+  type();
+}
+
+const statusEl = document.getElementById("live-status");
+if (statusEl) {
+  const statusText = statusEl.dataset.text || "";
+  // Start typing after a small delay
+  setTimeout(() => typeWriter(statusEl, statusText), 1000);
+}
