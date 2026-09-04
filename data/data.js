@@ -264,25 +264,25 @@ Beyond modeling geometry, I focused on design intent, strategically ordering fea
 This practice significantly strengthened my ability to think like a mechanical designer rather than just a CAD user. The exercises improved my modeling speed, structural planning of feature trees, and ability to anticipate downstream design changes, skills directly applicable to real-world product development and mechanical systems design.
 </p>`,
 
-      media: [
-        { type: "sketchfab", src: "https://sketchfab.com/models/f37feab56b7545d6936064cdd8c11b58/embed", label: "Model Mania Challange Year 2000 Phase 2" },
-        { type: "sketchfab", src: "https://sketchfab.com/models/bd5c6a26b017411083a42fcb77556969/embed", label: "Model Mania Challange Year 2001 Phase 2" },
-        { type: "sketchfab", src: "https://sketchfab.com/models/5d4b0e20e80f429c9d4c5a85a70088f4/embed", label: "Model Mania Challange Year 2002 Phase 1" },
-        { type: "sketchfab", src: "https://sketchfab.com/models/24d459a510f640cea27b65921498faaf/embed", label: "Model Mania Challange Year 2003 Phase 2" },
-        { type: "sketchfab", src: "https://sketchfab.com/models/a61d88c7bafe470ea3129179c2770b86/embed", label: "Model Mania Challange Year 2004 Phase 2" },
-        { type: "sketchfab", src: "https://sketchfab.com/models/2648ce4a717448b0bca068dee78653a1/embed", label: "Model Mania Challange Year 2005 Phase 2" },
-        { type: "sketchfab", src: "https://sketchfab.com/models/04a08f17703345e6904d5b77e266ef70/embed", label: "Model Mania Challange Year 2006 Phase 2" },
-        { type: "sketchfab", src: "https://sketchfab.com/models/4e5e083e4d6942f98b80b5460f8055d1/embed", label: "Model Mania Challange Year 2007 Phase 2" },
-        { type: "sketchfab", src: "https://sketchfab.com/models/6eb9548f6f4943f8afefe9ad79b90085/embed", label: "Model Mania Challange Year 2008 Phase 2" },
-        {type:"pdf", src:"assets/media/pdfs/solidworks-model-mania1.pdf", label:"Solidworks SimExpress Study 2008 Phase 2"},
-        { type: "sketchfab", src: "https://sketchfab.com/models/af23c09f140449389042c7e066e2214c/embed", label: "Model Mania Challange Year 2009 Phase 1" },
-        {type:"pdf", src:"assets/media/pdfs/solidworks-model-mania2.pdf", label:"Solidworks SimExpress Study 2009 Phase 2"},
-        { type: "sketchfab", src: "https://sketchfab.com/models/67c1a5534ad14803b2af969f999e05ee/embed", label: "Model Mania Challange Year 2010 Phase 2" },
-        {type:"pdf", src:"assets/media/pdfs/solidworks-model-mania3.pdf", label:"Solidworks SimExpress Study 2010 Phase 2"}
-      ],
+    media: [
+      { type: "sketchfab", src: "https://sketchfab.com/models/f37feab56b7545d6936064cdd8c11b58/embed", label: "Model Mania Challange Year 2000 Phase 2" },
+      { type: "sketchfab", src: "https://sketchfab.com/models/bd5c6a26b017411083a42fcb77556969/embed", label: "Model Mania Challange Year 2001 Phase 2" },
+      { type: "sketchfab", src: "https://sketchfab.com/models/5d4b0e20e80f429c9d4c5a85a70088f4/embed", label: "Model Mania Challange Year 2002 Phase 1" },
+      { type: "sketchfab", src: "https://sketchfab.com/models/24d459a510f640cea27b65921498faaf/embed", label: "Model Mania Challange Year 2003 Phase 2" },
+      { type: "sketchfab", src: "https://sketchfab.com/models/a61d88c7bafe470ea3129179c2770b86/embed", label: "Model Mania Challange Year 2004 Phase 2" },
+      { type: "sketchfab", src: "https://sketchfab.com/models/2648ce4a717448b0bca068dee78653a1/embed", label: "Model Mania Challange Year 2005 Phase 2" },
+      { type: "sketchfab", src: "https://sketchfab.com/models/04a08f17703345e6904d5b77e266ef70/embed", label: "Model Mania Challange Year 2006 Phase 2" },
+      { type: "sketchfab", src: "https://sketchfab.com/models/4e5e083e4d6942f98b80b5460f8055d1/embed", label: "Model Mania Challange Year 2007 Phase 2" },
+      { type: "sketchfab", src: "https://sketchfab.com/models/6eb9548f6f4943f8afefe9ad79b90085/embed", label: "Model Mania Challange Year 2008 Phase 2" },
+      { type: "pdf", src: "assets/media/pdfs/solidworks-model-mania1.pdf", label: "Solidworks SimExpress Study 2008 Phase 2" },
+      { type: "sketchfab", src: "https://sketchfab.com/models/af23c09f140449389042c7e066e2214c/embed", label: "Model Mania Challange Year 2009 Phase 1" },
+      { type: "pdf", src: "assets/media/pdfs/solidworks-model-mania2.pdf", label: "Solidworks SimExpress Study 2009 Phase 2" },
+      { type: "sketchfab", src: "https://sketchfab.com/models/67c1a5534ad14803b2af969f999e05ee/embed", label: "Model Mania Challange Year 2010 Phase 2" },
+      { type: "pdf", src: "assets/media/pdfs/solidworks-model-mania3.pdf", label: "Solidworks SimExpress Study 2010 Phase 2" }
+    ],
 
     attachments: [
-        { label: "SolidWorks Project Files (.zip)   [will upload soon!]", src: "assets/attachments/zips/solidworks-model-mania.zip" }
+      { label: "SolidWorks Project Files (.zip)   [will upload soon!]", src: "assets/attachments/zips/solidworks-model-mania.zip" }
     ]
   },
 
@@ -349,8 +349,76 @@ This project strengthened my ability to think beyond CAD modeling and focus on m
     ],
 
     attachments: [
-      {label: "CAD Files (.zip)", src: "assets/attachments/zips/home-me.zip"},
-      {label: "Hackathon Submission Page (Webpage)", src: "https://devpost.com/software/home-me-76dsv8"}
+      { label: "CAD Files (.zip)", src: "assets/attachments/zips/home-me.zip" },
+      { label: "Hackathon Submission Page (Webpage)", src: "https://devpost.com/software/home-me-76dsv8" }
+    ]
+  },
+
+  {
+    id: "cubesat-digital-twin",
+    title: "CubeSat Digital Twin",
+    subtitle: "High-Fidelity 3U CAD Architecture & Dynamics Verification",
+    years: [2026],
+    tags: ["cad", "fea", "matlab", "research"],
+    thumbnail: "",
+
+    summary:
+      "Full 3U nanosatellite structural digital twin integrating avionics, ADCS packaging, and material-accurate mass/inertia extraction for real-time dynamics simulation.",
+
+    detailHTML: `<h2>Overview</h2>
+    <h3>--ACTIVE DEVELOPMENT: CAD COMPLETE | DYNAMICS CO-SIMULATION IN PROGRESS--</h3>
+<p>
+This project focuses on architecting a high-fidelity digital twin of a 3U CubeSat, bridging mechanical assembly design with real-time rotational dynamics modeling. The overarching goal is to mirror professional aerospace systems engineering workflows: validating mass distributions, component envelopes, and launch-load limits in CAD before feeding exact physical properties directly into a MATLAB/Simulink multi-body attitude determination and control system (ADCS) simulation.
+</p>
+
+<p>
+The project has reached a major milestone: <strong>the 3D structural CAD model and internal subsystem integration are complete</strong>. Current development is centered on exporting validated physical properties to the simulation backend to test reaction wheel detumbling and three-axis pointing maneuvers.
+</p>
+
+<h3>What I Built</h3>
+<p>
+I modeled the complete 3U CubeSat mechanical structure and component integration in SOLIDWORKS, centered around a modular 3U chassis envelope (VERSE-03 architecture) and standard CubeSat Design Specifications (CDS). The internal architecture packages all key satellite subsystems:
+</p>
+
+<ul>
+  <li><strong>Subsystem Packaging & Layout:</strong> Integrated the flight computer, electrical power system (EPS), battery arrays, reaction wheel cluster, and a dedicated 1U payload section for edge computing and imaging hardware.</li>
+  <li><strong>Rigorous Material Assignment:</strong> Assigned accurate physical material profiles throughout the entire assembly—including aerospace-grade Aluminum 6061-T6 for the chassis rails and ribbing, and FR-4 composites for avionics stack boards—to precisely calculate total system mass and center-of-gravity (CG).</li>
+  <li><strong>Inertia Tensor Extraction:</strong> Extracted the full, realistic mass moment of inertia matrix ($I_{xx}$, $I_{yy}$, $I_{zz}$, and off-diagonal cross-products) to replace idealized rigid-body assumptions in the numerical attitude dynamics pipeline.</li>
+</ul>
+
+<h3>Current Stage & Next Steps</h3>
+<p>
+With the primary CAD assembly and component fitment finalized, the physical parameters have been mapped into MATLAB. The active phase focuses on:
+</p>
+
+<ul>
+  <li>Coupling the CAD-derived inertia tensor with quaternion-based kinematics and Euler rotational dynamics equations</li>
+  <li>Simulating reaction wheel torque limits and detumbling control algorithms (B-dot / PID control)</li>
+  <li>Validating structural rail tolerances, PC104 board spacing, and harness routing paths</li>
+  <li>Executing modal and static FEA sweeps to verify structural integrity under launch vehicle vibration profiles</li>
+</ul>
+
+<h3>Technical Focus</h3>
+<ul>
+  <li>3U CubeSat structural modeling & packaging in SOLIDWORKS</li>
+  <li>Material characterization for mass properties and accurate inertia tensor extraction</li>
+  <li>Digital twin co-simulation linking mechanical CAD data to MATLAB dynamic models</li>
+  <li>Avionics stack clearances, harness routing, and fastener constraint management</li>
+  <li>Design for Additive/Subtractive Manufacturing (CNC Al 6061-T6 frame, 3D printed internal brackets)</li>
+</ul>
+
+<p>
+Interactive Sketchfab 3D models of the completed chassis assembly and internal subsystem layout will be embedded below, with dynamic simulation results and FEA verification updates added as co-simulation concludes.
+</p>`,
+
+    media: [
+      { type: "sketchfab", src: "https://sketchfab.com/models/05f3b9d144fb48cfae423ccf7d74dcc9/embed", label: "Interactive 3D CAD Model (Completed 3U Assembly)" },
+      { type: "sketchfab", src: "https://sketchfab.com/models/988333df49b84d5e8547e31b2508a53f/embed", label: "Interactive 3D CAD Model (Internal Avionics & Payload Stack)" }
+    ],
+
+    attachments: [
+      { label: "CAD Assembly Files (.zip) [Coming Soon]", src: "" },
+      { label: "Digital Twin System Architecture Document (.pdf) [Coming Soon]", src: "" }
     ]
   }
 ];
