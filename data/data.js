@@ -360,7 +360,7 @@ This project strengthened my ability to think beyond CAD modeling and focus on m
     subtitle: "High-Fidelity 3U CAD Architecture & Dynamics Verification",
     years: [2026],
     tags: ["cad", "fea", "matlab", "research"],
-    thumbnail: "",
+    thumbnail: "assets/thumbnails/cubesat-digital-twin.png",
 
     summary:
       "Full 3U nanosatellite structural digital twin integrating avionics, ADCS packaging, and material-accurate mass/inertia extraction for real-time dynamics simulation.",
