@@ -24,7 +24,7 @@
     <span class="scan-pulse"></span>
 
     <span class="noise-layer"></span>
-
+   
   </div>
 
   <!-- HEADER -->
@@ -72,6 +72,21 @@
     <div class="project-filters" id="year-filters"></div>
 
     <div class="project-grid" id="project-grid"></div>
+
+    <!-- OTHER / ARCHIVED PROJECTS -->
+    <div class="other-projects-wrapper" id="other-projects-wrapper">
+      <button type="button" class="other-projects-text-btn" id="other-projects-toggle" aria-expanded="false" aria-controls="other-projects-collapse">
+        <span class="other-projects-label">Other Projects</span>
+        <span class="other-projects-count" id="other-projects-count">(0)</span>
+        <span class="toggle-icon">▾</span>
+      </button>
+
+      <div class="other-projects-collapse" id="other-projects-collapse">
+        <div class="other-projects-inner">
+          <div class="project-grid" id="other-project-grid"></div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer class="footer">

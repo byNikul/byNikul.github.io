@@ -30,6 +30,11 @@ if (header) {
 // DOM REFERENCES
 // =====================
 const grid = document.getElementById("project-grid");
+const otherGrid = document.getElementById("other-project-grid");
+const otherProjectsToggle = document.getElementById("other-projects-toggle");
+const otherProjectsCollapse = document.getElementById("other-projects-collapse");
+const otherProjectsCount = document.getElementById("other-projects-count");
+const otherProjectsWrapper = document.getElementById("other-projects-wrapper");
 const tagFilterContainer = document.getElementById("tag-filters");
 const yearFilterContainer = document.getElementById("year-filters");
 
@@ -82,17 +87,59 @@ function renderYearFilters() {
 }
 
 // =====================
+// PROJECT CARD COMPONENT
+// =====================
+function createProjectCard(project) {
+  const card = document.createElement("a");
+  card.className = "project-card";
+  card.href = `project.html?id=${project.id}`;
+
+  card.innerHTML = `
+    <div class="project-thumb">
+      <img src="${project.thumbnail}" alt="${project.title}">
+    </div>
+
+    <div class="project-info">
+      <h3>${project.title}</h3>
+      <p>${project.summary}</p>
+
+      <div class="tags">
+        ${project.tags.map(tagKey => {
+          const tag = TAGS[tagKey];
+          if (!tag) return "";
+          const domain = DOMAINS[tag.domain];
+          return `
+            <span class="tag"
+              style="background:${domain.color}20;color:${domain.color}">
+              ${tag.label}
+            </span>`;
+        }).join("")}
+
+        ${project.years.map(y =>
+          `<span class="tag year">${y}</span>`
+        ).join("")}
+      </div>
+    </div>
+  `;
+
+  return card;
+}
+
+// =====================
 // PROJECT RENDER
 // =====================
 function renderProjects() {
-  grid.innerHTML = "";
+  if (grid) grid.innerHTML = "";
+  if (otherGrid) otherGrid.innerHTML = "";
 
   const sortedProjects = [...projects].sort(
     (a, b) => Math.max(...b.years) - Math.max(...a.years)
   );
 
-  sortedProjects.forEach(project => {
+  const highlightedMatches = [];
+  const archivedMatches = [];
 
+  sortedProjects.forEach(project => {
     const matchesTag =
       activeTags.length === 0 ||
       project.tags.some(tag => activeTags.includes(tag));
@@ -103,39 +150,69 @@ function renderProjects() {
 
     if (!matchesTag || !matchesYear) return;
 
-    const card = document.createElement("a");
-    card.className = "project-card";
-    card.href = `project.html?id=${project.id}`;
-
-    card.innerHTML = `
-      <div class="project-thumb">
-        <img src="${project.thumbnail}" alt="${project.title}">
-      </div>
-
-      <div class="project-info">
-        <h3>${project.title}</h3>
-        <p>${project.summary}</p>
-
-        <div class="tags">
-          ${project.tags.map(tagKey => {
-            const tag = TAGS[tagKey];
-            const domain = DOMAINS[tag.domain];
-            return `
-              <span class="tag"
-                style="background:${domain.color}20;color:${domain.color}">
-                ${tag.label}
-              </span>`;
-          }).join("")}
-
-          ${project.years.map(y =>
-            `<span class="tag year">${y}</span>`
-          ).join("")}
-        </div>
-      </div>
-    `;
-
-    grid.appendChild(card);
+    if (project.status === "archived") {
+      archivedMatches.push(project);
+    } else {
+      highlightedMatches.push(project);
+    }
   });
+
+  // Render Highlighted Projects (Main Section)
+  if (grid) {
+    if (highlightedMatches.length > 0) {
+      highlightedMatches.forEach(project => {
+        grid.appendChild(createProjectCard(project));
+      });
+    } else {
+      const emptyMsg = document.createElement("div");
+      emptyMsg.className = "no-projects-msg";
+      emptyMsg.textContent = "No highlighted projects match the selected filters.";
+      grid.appendChild(emptyMsg);
+    }
+  }
+
+  // Render Archived Projects ("Other Projects" Section)
+  if (otherGrid) {
+    if (archivedMatches.length > 0) {
+      archivedMatches.forEach(project => {
+        otherGrid.appendChild(createProjectCard(project));
+      });
+    } else {
+      const emptyMsg = document.createElement("div");
+      emptyMsg.className = "no-projects-msg";
+      emptyMsg.textContent = "No other projects match the selected filters.";
+      otherGrid.appendChild(emptyMsg);
+    }
+  }
+
+  // Update Count Badge on the Dropdown Toggle
+  if (otherProjectsCount) {
+    otherProjectsCount.textContent = `(${archivedMatches.length})`;
+  }
+
+  // Hide the wrapper entirely if there are no archived projects at all in the database
+  if (otherProjectsWrapper) {
+    const hasAnyArchived = projects.some(p => p.status === "archived");
+    otherProjectsWrapper.style.display = hasAnyArchived ? "" : "none";
+  }
+}
+
+// =====================
+// OTHER PROJECTS TOGGLE
+// =====================
+function initOtherProjectsDropdown() {
+  if (otherProjectsToggle && otherProjectsCollapse) {
+    otherProjectsToggle.addEventListener("click", () => {
+      const isOpen = otherProjectsCollapse.classList.toggle("open");
+      otherProjectsToggle.classList.toggle("open", isOpen);
+      otherProjectsToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+
+      const labelEl = otherProjectsToggle.querySelector(".other-projects-label");
+      if (labelEl) {
+        labelEl.textContent = isOpen ? "Hide Other Projects" : "Other Projects";
+      }
+    });
+  }
 }
 
 // =====================
@@ -204,6 +281,7 @@ document.addEventListener("click", e => {
 renderTagFilters();
 renderYearFilters();
 renderProjects();
+initOtherProjectsDropdown();
 
 // =====================
 // LIVE STATUS TYPEWRITER

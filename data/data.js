@@ -37,12 +37,16 @@ const PLACEHOLDER_IMAGE = "assets/images/project-placeholder.jpg";
 
 // ============================================================================================
 // 🚀 PROJECT DATA
+// status:
+//   - "highlighted" : Main featured projects section
+//   - "archived"    : Expandable "Other Projects" dropdown section
 // ============================================================================================
 const projects = [
   {
     id: "jeopardy-clashroyale",
     title: "Jeopardy × Clash Royale",
     subtitle: "MATLAB-Based Game System Architecture",
+    status: "archived",
     years: [2025],
     tags: ["matlab", "simulink"],
     thumbnail: "assets/thumbnails/jeopardy-clashroyale.jpg",
@@ -91,6 +95,7 @@ The final result is a structured, modular MATLAB application that blends UI desi
     id: "gravityspy-ml",
     title: "GravitySPY ML Framework",
     subtitle: "Gravitational Wave Data Classification",
+    status: "highlighted",
     years: [2024],
     tags: ["python", "ml", "data", "research"],
     thumbnail: "assets/thumbnails/gravityspy-ml.png",
@@ -165,6 +170,7 @@ This project strengthened my understanding of deep learning system design beyond
     id: "portfolio-website",
     title: "Portfolio Website",
     subtitle: "YOU'RE ON IT RIGHT NOW! GO EXPLORE IT AND SEE THE CODE ON GITHUB!!",
+    status: "archived",
     years: [2025, 2026],
     tags: ["web", "github"],
     thumbnail: "assets/thumbnails/portfolio-website.png",
@@ -224,6 +230,7 @@ Feel free to explore the live site above and see the work firsthand. If you have
     id: "solidworks-model-mania",
     title: "Parametric CAD Challenges",
     subtitle: "High-Speed Parametric CAD Challenges",
+    status: "archived",
     years: [2025, 2026],
     tags: ["cad", "fea"],
     thumbnail: "assets/thumbnails/solidworks-model-mania.png",
@@ -290,6 +297,7 @@ This practice significantly strengthened my ability to think like a mechanical d
     id: "home-me",
     title: "HomeMe",
     subtitle: "48-Hour Hackathon Project",
+    status: "highlighted",
     years: [2025],
     tags: ["cad", "printing3d", "hackathon"],
     thumbnail: "assets/thumbnails/home-me.png",
@@ -358,6 +366,7 @@ This project strengthened my ability to think beyond CAD modeling and focus on m
     id: "cubesat-digital-twin",
     title: "CubeSat Digital Twin",
     subtitle: "High-Fidelity 3U CAD Architecture & Dynamics Verification",
+    status: "highlighted",
     years: [2026],
     tags: ["cad", "fea", "matlab", "research"],
     thumbnail: "assets/thumbnails/cubesat-digital-twin.png",
