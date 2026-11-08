@@ -37,9 +37,9 @@ const PLACEHOLDER_IMAGE = "assets/images/project-placeholder.jpg";
 
 // ============================================================================================
 // 🚀 PROJECT DATA
-// status:
-//   - "highlighted" : Main featured projects section
-//   - "archived"    : Expandable "Other Projects" dropdown section
+// fields:
+//   - status   : "highlighted" (main featured grid) | "archived" ("Other Projects" section)
+//   - progress : "in-progress" (labels tile with yellow ribbon) | "complete"
 // ============================================================================================
 const projects = [
   {
@@ -47,6 +47,7 @@ const projects = [
     title: "Jeopardy × Clash Royale",
     subtitle: "MATLAB-Based Game System Architecture",
     status: "archived",
+    progress: "complete",
     years: [2025],
     tags: ["matlab", "simulink"],
     thumbnail: "assets/thumbnails/jeopardy-clashroyale.jpg",
@@ -96,6 +97,7 @@ The final result is a structured, modular MATLAB application that blends UI desi
     title: "GravitySPY ML Framework",
     subtitle: "Gravitational Wave Data Classification",
     status: "highlighted",
+    progress: "complete",
     years: [2024],
     tags: ["python", "ml", "data", "research"],
     thumbnail: "assets/thumbnails/gravityspy-ml.png",
@@ -171,6 +173,7 @@ This project strengthened my understanding of deep learning system design beyond
     title: "Portfolio Website",
     subtitle: "YOU'RE ON IT RIGHT NOW! GO EXPLORE IT AND SEE THE CODE ON GITHUB!!",
     status: "archived",
+    progress: "complete",
     years: [2025, 2026],
     tags: ["web", "github"],
     thumbnail: "assets/thumbnails/portfolio-website.png",
@@ -231,6 +234,7 @@ Feel free to explore the live site above and see the work firsthand. If you have
     title: "Parametric CAD Challenges",
     subtitle: "High-Speed Parametric CAD Challenges",
     status: "archived",
+    progress: "complete",
     years: [2025, 2026],
     tags: ["cad", "fea"],
     thumbnail: "assets/thumbnails/solidworks-model-mania.png",
@@ -298,6 +302,7 @@ This practice significantly strengthened my ability to think like a mechanical d
     title: "HomeMe",
     subtitle: "48-Hour Hackathon Project",
     status: "highlighted",
+    progress: "complete",
     years: [2025],
     tags: ["cad", "printing3d", "hackathon"],
     thumbnail: "assets/thumbnails/home-me.png",
@@ -367,6 +372,7 @@ This project strengthened my ability to think beyond CAD modeling and focus on m
     title: "CubeSat Digital Twin",
     subtitle: "Simulating spacecraft dynamics and closed-loop control from physical SOLIDWORKS CAD to 3D telemetry rendering.",
     status: "highlighted",
+    progress: "in-progress",
     years: [2026],
     tags: ["cad", "fea", "matlab", "simulink", "research"],
     thumbnail: "assets/thumbnails/cubesat-digital-twin.png",

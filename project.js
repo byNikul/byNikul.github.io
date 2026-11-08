@@ -127,6 +127,9 @@ container.innerHTML = `
     
     <div class="tag-row">
       ${project.years.map(y => `<span class="tag year">${y}</span>`).join("")}
+      ${(project.progress === "in-progress" || project.progress === "in progress")
+        ? `<span class="tag progress-tag" style="background:#facc1520;color:#facc15;border-color:#facc15;">IN PROGRESS</span>`
+        : ""}
     </div>
 
     <div class="tag-row">

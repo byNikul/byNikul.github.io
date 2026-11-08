@@ -22,7 +22,7 @@ if (translationEl) {
 const header = document.querySelector(".header");
 if (header) {
   window.addEventListener("scroll", () => {
-    header.classList.toggle("scrolled", window.scrollY > 40);
+    header.classList.toggle("scrolled", window.scrollY > 20);
   });
 }
 
@@ -94,7 +94,13 @@ function createProjectCard(project) {
   card.className = "project-card";
   card.href = `project.html?id=${project.id}`;
 
+  const isInProgress = project.progress === "in-progress" || project.progress === "in progress";
+  const ribbonHTML = isInProgress
+    ? `<span class="project-ribbon">In Progress</span>`
+    : "";
+
   card.innerHTML = `
+    ${ribbonHTML}
     <div class="project-thumb">
       <img src="${project.thumbnail}" alt="${project.title}">
     </div>
