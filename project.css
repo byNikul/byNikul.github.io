@@ -288,6 +288,33 @@ body::before {
   opacity: 0.85;
 }
 
+.project-detail h3 {
+  margin-top: 32px;
+  margin-bottom: 14px;
+  color: #f8fafc;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+}
+
+.project-detail ul,
+.project-detail ol {
+  padding-left: 22px;
+  margin: 14px 0 24px;
+}
+
+.project-detail li {
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.project-detail li:last-child {
+  margin-bottom: 0;
+}
+
+.project-detail ol li {
+  margin-bottom: 16px;
+}
+
 /* =========================
    ATTACHMENTS SECTION
 ========================= */

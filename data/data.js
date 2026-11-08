@@ -365,64 +365,87 @@ This project strengthened my ability to think beyond CAD modeling and focus on m
   {
     id: "cubesat-digital-twin",
     title: "CubeSat Digital Twin",
-    subtitle: "High-Fidelity 3U CAD Architecture & Dynamics Verification",
+    subtitle: "Simulating spacecraft dynamics and closed-loop control from physical SOLIDWORKS CAD to 3D telemetry rendering.",
     status: "highlighted",
     years: [2026],
-    tags: ["cad", "fea", "matlab", "research"],
+    tags: ["cad", "fea", "matlab", "simulink", "research"],
     thumbnail: "assets/thumbnails/cubesat-digital-twin.png",
 
     summary:
-      "Full 3U nanosatellite structural digital twin integrating avionics, ADCS packaging, and material-accurate mass/inertia extraction for real-time dynamics simulation.",
+      "An end-to-end 3U CubeSat digital twin integrating SOLIDWORKS structural CAD, closed-loop MATLAB orbital dynamics, discrete ADCS flight software, and real-time 3D telemetry visualization.",
 
     detailHTML: `<h2>Overview</h2>
-    <h3>--ACTIVE DEVELOPMENT: CAD COMPLETE | DYNAMICS CO-SIMULATION IN PROGRESS--</h3>
+    <p><strong>--ACTIVE DEVELOPMENT: This project is a work in progress--</strong></p>
 <p>
-This project focuses on architecting a high-fidelity digital twin of a 3U CubeSat, bridging mechanical assembly design with real-time rotational dynamics modeling. The overarching goal is to mirror professional aerospace systems engineering workflows: validating mass distributions, component envelopes, and launch-load limits in CAD before feeding exact physical properties directly into a MATLAB/Simulink multi-body attitude determination and control system (ADCS) simulation.
+This project focuses on architecting an end-to-end, high-fidelity digital twin of a 3U CubeSat, bridging mechanical hardware design with real-time orbital mechanics and closed-loop Attitude Determination and Control System (ADCS) flight software. The overarching objective is to mirror professional aerospace systems engineering workflows: modeling complete physical structures, performing FEA, characterizing mass and inertia properties, using them for simulating environmental space dynamics, testing flight control software against physical hardware limits, and verifying mission performance in 3D before committing to physical prototyping.
 </p>
 
+<h3>Technical Focus & Capabilities</h3>
+<ol>
+  <li><strong>Structural Hardware:</strong> SOLIDWORKS 3U CubeSat CAD modeling & Finite Element Analysis (FEA in progress).</li>
+  <li><strong>Mass Properties:</strong> Accurate material characterization, mass budget, and inertia tensor extraction for simulation.</li>
+  <li><strong>Physics Engine:</strong> MATLAB-based orbital mechanics & environmental perturbation modeling (geomagnetic field, aero drag, gravity gradient).</li>
+  <li><strong>Spacecraft Dynamics:</strong> Rotational kinematics, quaternion attitude propagation, and multi-body dynamics.</li>
+  <li><strong>Flight Software (ADCS):</strong> Extended Kalman Filter (EKF) state estimation, Proportional-Derivative (PD) control, and Feedforward Gyroscopic Decoupling.</li>
+  <li><strong>Actuator Management:</strong> Reaction wheel allocation, RPM saturation handling, and magnetorquer momentum dumping.</li>
+  <li><strong>Autonomous Operations:</strong> Multi-phase mission state machine for slew execution, disturbance rejection, and recovery.</li>
+  <li><strong>Visualization:</strong> Time-stepped discrete-continuous co-simulation & real-time 3D telemetry rendering.</li>
+  <li><strong>Next-Gen Integration:</strong> Simulink block-diagram model-based design (in progress).</li>
+</ol>
+
+<h3>Digital Twin Architecture: What I've Built So Far</h3>
 <p>
-The project has reached a major milestone: <strong>the 3D structural CAD model and internal subsystem integration are complete</strong>. Current development is centered on exporting validated physical properties to the simulation backend to test reaction wheel detumbling and three-axis pointing maneuvers.
+To ensure high technical fidelity, the digital twin is segmented into five interconnected architectural layers:
 </p>
 
-<h3>What I Built</h3>
-<p>
-I modeled the complete 3U CubeSat mechanical structure and component integration in SOLIDWORKS, centered around a modular 3U chassis envelope (VERSE-03 architecture) and standard CubeSat Design Specifications (CDS). The internal architecture packages all key satellite subsystems:
-</p>
+<ol>
+  <li>
+    <strong>CAD Design (The Hardware):</strong> 
+    I modeled the complete 3U nanosatellite from scratch in SOLIDWORKS, adhering strictly to standard 3U CubeSat Design Specifications. The mechanical assembly integrates a modular 3U structural chassis, avionics stacks, solar arrays, payload enclosures, and an ADCS module. I assigned realistic physical material profiles (such as aerospace-grade Aluminum 6061-T6 and FR-4 avionics boards) across the entire assembly to extract exact physical mass distributions, center of mass (CoM), and the complete mass moment of inertia tensor directly into MATLAB, replacing idealized rigid-body assumptions.
+  </li>
+  <li>
+    <strong>Physics Engine (The Universe):</strong> 
+    I programmed the continuous physical laws governing low Earth orbit (LEO) directly in MATLAB. The environment model simulates orbital mechanics, atmospheric drag, Earth geomagnetic field variations, gravity-gradient torques, and gyroscopic rigid-body rotational dynamics governed by Euler's equations of motion and quaternion-based kinematics.
+  </li>
+  <li>
+    <strong>Control Algorithms (The Flight Software Brain):</strong> 
+    I engineered the discrete flight software executing onboard the satellite. This incorporates an <strong>Extended Kalman Filter (EKF)</strong> to filter and fuse noisy sensor readings (magnetometers, sun sensors, and rate gyroscopes), a <strong>PD (Proportional-Derivative) attitude controller</strong> computing optimal torque vectors for three-axis stabilization, and actuator allocation logic commanding reaction wheels for precision pointing alongside magnetorquers for momentum management and desaturation.
+  </li>
+  <li>
+    <strong>Closed-Loop Simulation (The Verification Testbed):</strong> 
+    I interconnected the flight software brain and the physics engine into a synchronized, discrete-continuous time-stepped simulation loop. This closed-loop harness continuously forces the onboard flight software to counteract orbital disturbances, sensor noise, actuator torque limitations, and momentum saturation over time.
+  </li>
+  <li>
+    <strong>3D Telemetry Visualization (Real-Time Verification):</strong> 
+    I utilized the MATLAB Aerospace Toolbox to create an interactive 3D visualizer, routing the raw mathematical attitude telemetry (quaternions and angular rate vectors) calculated during simulation runs directly into the visualizer. This enables real-time visual tracking of the custom CAD satellite model maneuvering through space, confirming that mathematical convergence translates to correct physical attitude dynamics.
+  </li>
+</ol>
 
+<h3>Simulation Test 1: Nadir Slew & Disturbance Rejection (150s Mission Run)</h3>
+<p>
+The closed-loop architecture was benchmarked in an end-to-end 150-second mission scenario:
+</p>
 <ul>
-  <li><strong>Subsystem Packaging & Layout:</strong> Integrated the flight computer, electrical power system (EPS), battery arrays, reaction wheel cluster, and a dedicated 1U payload section for edge computing and imaging hardware.</li>
-  <li><strong>Rigorous Material Assignment:</strong> Assigned accurate physical material profiles throughout the entire assembly—including aerospace-grade Aluminum 6061-T6 for the chassis rails and ribbing, and FR-4 composites for avionics stack boards—to precisely calculate total system mass and center-of-gravity (CG).</li>
-  <li><strong>Inertia Tensor Extraction:</strong> Extracted the full, realistic mass moment of inertia matrix ($I_{xx}$, $I_{yy}$, $I_{zz}$, and off-diagonal cross-products) to replace idealized rigid-body assumptions in the numerical attitude dynamics pipeline.</li>
+  <li><strong>Phase 1: Nadir Pointing Slew:</strong> The satellite was initialized with an arbitrary tumble orientation and commanded to execute a three-axis slew maneuver to orient its payload camera boresight directly towards Earth (nadir pointing). The PD controller successfully drove reaction wheel torques to converge on the target quaternion with minimal overshoot.</li>
+  <li><strong>Phase 2: Artificial Disturbance Injection:</strong> Once stabilized, a high-magnitude rotational disturbance torque was injected into the system to simulate unexpected external perturbations or severe environmental anomalies.</li>
+  <li><strong>Phase 3: Autonomous Detection & Recovery:</strong> The Extended Kalman Filter rapidly tracked the resulting angular rate surge despite measurement noise. The control system commanded immediate corrective counter-torques, fully arresting residual body rates and returning the satellite to stable nadir lock within the 150-second simulation window.</li>
 </ul>
-
-<h3>Current Stage & Next Steps</h3>
 <p>
-With the primary CAD assembly and component fitment finalized, the physical parameters have been mapped into MATLAB. The active phase focuses on:
+Telemetry outputs, including quaternion tracking error, body angular rates, control torques, and reaction wheel speed profiles, are documented in the media viewport alongside mission visualization recordings.
 </p>
 
+<h3>Roadmap & Next Steps</h3>
 <ul>
-  <li>Coupling the CAD-derived inertia tensor with quaternion-based kinematics and Euler rotational dynamics equations</li>
-  <li>Simulating reaction wheel torque limits and detumbling control algorithms (B-dot / PID control)</li>
-  <li>Validating structural rail tolerances, PC104 board spacing, and harness routing paths</li>
-  <li>Executing modal and static FEA sweeps to verify structural integrity under launch vehicle vibration profiles</li>
-</ul>
-
-<h3>Technical Focus</h3>
-<ul>
-  <li>3U CubeSat structural modeling & packaging in SOLIDWORKS</li>
-  <li>Material characterization for mass properties and accurate inertia tensor extraction</li>
-  <li>Digital twin co-simulation linking mechanical CAD data to MATLAB dynamic models</li>
-  <li>Avionics stack clearances, harness routing, and fastener constraint management</li>
-  <li>Design for Additive/Subtractive Manufacturing (CNC Al 6061-T6 frame, 3D printed internal brackets)</li>
-</ul>
-
-<p>
-Interactive Sketchfab 3D models of the completed chassis assembly and internal subsystem layout will be embedded below, with dynamic simulation results and FEA verification updates added as co-simulation concludes.
-</p>`,
+  <li><strong>Simulink Co-Simulation:</strong> Expanding the physics engine and control algorithms into a modular MATLAB/Simulink co-simulation framework to facilitate non-linear multi-body dynamics, automated gain tuning, and hardware-in-the-loop (HIL) testing interfaces.</li>
+  <li><strong>Advanced Maneuver Experiments:</strong> Executing complex orbital scenarios, including sun-tracking solar power charging modes, ground station target tracking slews, and magnetic B-dot detumbling optimization.</li>
+  <li><strong>Structural FEA & Environmental Qualification:</strong> Conducting comprehensive Finite Element Analysis (FEA) on the SOLIDWORKS structural CAD model, evaluating quasi-static launch g-loads, random vibration sweeps, and modal frequency response against standard rocket launch vehicle dispenser envelopes (e.g., Cal Poly CDS vibration profiles).</li>
+</ul>`,
 
     media: [
       { type: "sketchfab", src: "https://sketchfab.com/models/05f3b9d144fb48cfae423ccf7d74dcc9/embed", label: "Interactive 3D CAD Model (Completed 3U Assembly)" },
-      { type: "sketchfab", src: "https://sketchfab.com/models/988333df49b84d5e8547e31b2508a53f/embed", label: "Interactive 3D CAD Model (Internal Avionics & Payload Stack)" }
+      { type: "sketchfab", src: "https://sketchfab.com/models/988333df49b84d5e8547e31b2508a53f/embed", label: "Interactive 3D CAD Model (Internal Avionics & Payload Stack)" },
+      { type: "video", src: "assets/media/videos/cubesat-digital-twin1.mp4", label: "Simulation Test 1: Nadir Slew & Artifical Disturbance Recovery (Graphs in next tab)" },
+      { type: "image", src: "assets/media/images/cubesat-digital-twin1.png", label: "Simulation Test 1: Telemetry, Attitude Error & Wheel Torques" }
     ],
 
     attachments: [
