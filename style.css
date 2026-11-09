@@ -789,26 +789,72 @@ body::before {
     padding: 10px 24px;
   }
 
-  .about-me,
+  .about-me {
+    padding: 60px 24px 30px;
+  }
+
   .projects {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 40px 24px 70px;
   }
 
   .project-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   
   .project-thumb {
     height: 160px;
   }
 
+  /* Compact corner ribbon for mobile cards */
+  .project-ribbon {
+    top: 14px;
+    left: -34px;
+    width: 125px;
+    font-size: 0.56rem;
+    padding: 3px 0;
+  }
+
+  /* Make project summaries visible on touch/mobile devices where hover is unavailable */
+  .project-info p {
+    opacity: 0.85;
+    max-height: none;
+    overflow: visible;
+    transform: none;
+    margin-top: 10px;
+  }
+
   .other-projects-wrapper {
-    margin-top: 36px;
+    margin-top: 32px;
   }
 
   .other-projects-text-btn {
     font-size: 0.88rem;
-    padding: 6px 14px;
+    padding: 8px 16px;
+  }
+
+  .other-projects-collapse.open {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header {
+    padding: 8px 16px;
+  }
+
+  .name-translation {
+    display: none;
+  }
+
+  .about-me,
+  .projects {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .about-me h1,
+  .projects h2 {
+    font-size: 1.7rem;
   }
 }
