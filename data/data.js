@@ -529,7 +529,7 @@ As development progresses, comprehensive technical documentation will be integra
 
   {
     id: "power-cleaner-cad-model",
-    title: "Cordless Power Cleaner CAD & Assembly",
+    title: "Cordless Power Cleaner Reverse-Engineering",
     subtitle: "Full-Scale Solid Modeling, Production Drawings & 3DS Max Kinematic Animations",
     status: "highlighted",
     progress: "in-progress",
