@@ -458,6 +458,165 @@ Telemetry outputs, including quaternion tracking error, body angular rates, cont
       { label: "CAD Assembly Files (.zip) [Coming Soon]", src: "" },
       { label: "Digital Twin System Architecture Document (.pdf) [Coming Soon]", src: "" }
     ]
+  },
+
+  {
+    id: "active-suspension-quarter-car",
+    title: "Active Vehicle Suspension System",
+    subtitle: "2-DOF Quarter-Car Dynamics, State-Space Modeling & Electromechanical Voice Coil Actuation",
+    status: "highlighted",
+    progress: "in-progress",
+    years: [2026],
+    tags: ["matlab", "simulink", "data"],
+    thumbnail: "assets/thumbnails/active-suspension.png",
+
+    summary:
+      "Dynamical systems modeling and simulation of a 2-DOF quarter-car suspension, integrating static/transient parameter identification, state-space formulation, and active electromechanical voice coil control for road vibration mitigation.",
+
+    detailHTML: `<h2>Overview</h2>
+    <p><strong>WORK IN PROGRESS: Analytical derivations, state-space models, and comparative simulation plots will be published soon</strong></p>
+<p>
+This project focuses on the dynamical modeling, simulation, and active vibration control of a two-degree-of-freedom (2-DOF) quarter-car vehicle suspension system under road surface excitations. Developed within the context of <strong>EE/ME 324 Dynamical Systems</strong> at Clarkson University, the primary objective is to investigate how active electromechanical actuation can mitigate road-induced vibrations, suppress vehicle body accelerations, and optimize the fundamental engineering trade-off between passenger ride comfort and tire-road handling performance.
+</p>
+
+<h3>Technical Focus</h3>
+<ul>
+  <li>2-DOF mechanical vibration and quarter-car suspension dynamics modeling</li>
+  <li>State-variable (state-space) formulation in standard continuous-time matrix form (<b>ẋ</b> = <b>Ax</b> + <b>Bu</b>)</li>
+  <li>Empirical parameter identification: suspension stiffness (<i>k</i>₁) from static loading and damping (<i>b</i>₁) from transient logarithmic decrement</li>
+  <li>Electromechanical transduction modeling: Lorentz actuation force (<i>F<sub>a</sub></i> = α · <i>i<sub>a</sub></i>) and back-EMF voltage (<i>e</i><sub>emf</sub> = α(<i>ẏ</i>₁ − <i>ẏ</i>₂))</li>
+  <li>Coupled electrical-mechanical differential equation simulation in MATLAB</li>
+  <li>Pulse road disturbance response analysis (0.05 m rectangular bump profile) and parametric sensitivity sweeps (10× variation)</li>
+  <li>Active control voltage optimization to isolate vehicle body acceleration and minimize settling time</li>
+</ul>
+
+<h3>Project Scope & Methodology</h3>
+<p>
+The project investigates both passive and actively controlled suspension architectures across two core stages:
+</p>
+
+<ol>
+  <li>
+    <strong>Part 1 : Nominal System Modeling & Empirical Parameter Extraction:</strong> 
+    Deriving the coupled differential equations of motion for the sprung vehicle mass (<i>m</i>₁ = 500 kg) and unsprung wheel mass (<i>m</i>₂ = 15 kg, <i>k</i>₂ = 60,000 N/m). Using static displacement load test data to determine suspension stiffness (<i>k</i>₁), and analyzing damped free-response oscillations to calculate equivalent suspension damping (<i>b</i>₁). Constructing the 4-state linear state-space matrix model and evaluating vehicle displacement response (<i>y</i>₁, <i>y</i>₂) to a 0.05 m rectangular road pulse bump alongside parametric sensitivity sweeps (10× stiffness and damping variations).
+  </li>
+  <li>
+    <strong>Part 2 : Active Control Integration via Voice Coil Actuator:</strong> 
+    Integrating an electromechanical voice coil actuator in parallel with the passive spring-damper suspension. Developing the augmented 5-state electromechanical state-variable model combining electrical coil dynamics (winding resistance <i>R<sub>w</sub></i> = 5 Ω, inductance <i>L<sub>w</sub></i> = 0.01 H, coupling coefficient α = 100 N/A) with multi-body mechanics. Simulating multi-voltage step/pulse excitations (<i>E</i> = [−24, −12, 0, +12, +24] V) to benchmark active disturbance rejection against the passive system, and formulating dynamic feedback voltage strategies to minimize vehicle body acceleration (<i>ÿ</i>₁).
+  </li>
+</ol>
+
+<h3>Planned Deliverables & Upcoming Updates</h3>
+<p>
+As development progresses, comprehensive technical documentation will be integrated into this page, including:
+</p>
+<ul>
+  <li>Complete analytical derivations for both nominal and electromechanically coupled state-space matrices (<b>A</b>, <b>B</b>, <b>C</b>, <b>D</b>)</li>
+  <li>Comparative time-domain response plots of vehicle displacement (<i>y</i>₁), velocity (<i>ẏ</i>₁), and acceleration (<i>ÿ</i>₁) under varied actuator voltages</li>
+  <li>Parametric sensitivity analysis evaluating the effects of stiffness and damping extremes on settling time and overshoot</li>
+  <li>Proposed closed-loop dynamic control laws for optimal active ride leveling and disturbance attenuation</li>
+</ul>`,
+
+    media: [
+      { type: "image", src: "assets/media/images/active-vehicle-suspension-system1.png", label: "Schematic of the quarter car suspension model" },
+      { type: "image", src: "assets/media/images/active-vehicle-suspension-system2.png", label: "Schematic of quarter car suspension model with voice coil actuator" }
+    ],
+
+    attachments: [
+      { label: "Coming soon" }
+    ]
+  },
+
+  {
+    id: "power-cleaner-cad-model",
+    title: "Cordless Power Cleaner CAD & Assembly",
+    subtitle: "Full-Scale Solid Modeling, Production Drawings & 3DS Max Kinematic Animations",
+    status: "highlighted",
+    progress: "in-progress",
+    years: [2026],
+    tags: ["cad", "printing3d", "fea"],
+    thumbnail: "assets/thumbnails/power-cleaner.png",
+
+    summary:
+      "Comprehensive true-size SolidWorks modeling and reverse engineering of a cordless power cleaner, featuring clam-shell housing, battery subsystem, interchangeable sprayers, GD&T production drawings, and 3DS Max animations.",
+
+    detailHTML: `<h2>Overview</h2>
+    <p><strong>WORK IN PROGRESS: 3D models, dimensioned drawings, and 3DS Max renders will be published soon</strong></p>
+<p>
+This project focuses on the comprehensive parametric CAD modeling, assembly architecture, and digital engineering documentation of a commercial cordless handheld Power Cleaner. Developed for <strong>ME 444</strong> at Clarkson University, the overarching goal is to reverse-engineer the physical product from real-world component measurements, generating true-size, manufacturing-ready 3D solid models in SOLIDWORKS, complete with material specifications, mass property calculations, dimensioned orthographic production drawings, exploded assembly views with Bills of Materials (BOM), and kinematic 3ds Max animations.
+</p>
+
+<h3>Technical Focus</h3>
+<ul>
+  <li>Parametric 3D solid modeling of complex ergonomic surfaces and molded clam-shell enclosures (SOLIDWORKS)</li>
+  <li>Multi-body subassembly integration and kinematic constraint management</li>
+  <li>Material characterization, world-coordinate center of gravity (CG), and mass property extraction</li>
+  <li>Production drafting: 3rd angle orthographic projections, section views, and GD&T dimensioning</li>
+  <li>Exploded assembly documentation with numbered balloon callouts and Bills of Materials (BOM)</li>
+  <li>Photorealistic rendering and multi-camera kinematic animation in Autodesk 3ds Max</li>
+  <li>Manufacturing expansion: Scaled 3D print fabrication, marketing poster presentation, and FEA stress evaluation</li>
+</ul>
+
+<h3>Project Scope & Deliverables Rubric</h3>
+<p>
+The project encompasses end-to-end mechanical product modeling and documentation structured across the following primary deliverables:
+</p>
+
+<ol>
+  <li>
+    <strong>Solid Models of Primary Components:</strong>
+    Modeling all physical parts to exact scale in SOLIDWORKS with true thread leads, labels, and designated materials:
+    <ul>
+      <li><em>Shell Housing (Parts 1 & 2):</em> Ergonomic two-piece clam-shell body with handle, trigger mechanism, vents, internal screw bosses, and structural ribbing.</li>
+      <li><em>Battery Compartment (Parts 3 through 5):</em> Removable battery pack enclosure, internal guide rails, locking latch mechanism, and electrical contact interface.</li>
+      <li><em>Sprayer Heads & Attachments (Parts 6 through 8):</em> Extended high-pressure spray lance wand (Part 6), compact angled nozzle attachment (Part 7), and detergent reservoir bottle (Part 8) with functional threads.</li>
+      <li><em>Internal & Accessory Hardware (Part 9):</em> Internal pump fittings, high-pressure connectors, motor mounting brackets, and seal O-rings.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Mass Properties Analysis:</strong>
+    Assigning authentic material definitions to calculate the total mass, volume, surface area, and center of mass in global coordinates for every individual component and complete assembly.
+  </li>
+  <li>
+    <strong>Dimensioned 2D Production Drawings:</strong>
+    Generating ANSI/ASME standard 3rd angle projection drawing packages (isometric, front, top, and detailed section views with hidden line conventions) defining all manufacturing dimensions, tolerances, and title blocks.
+  </li>
+  <li>
+    <strong>Subassemblies & Complete Product Assemblies:</strong>
+    Constructing the internal shell subassembly and two distinct full product configurations: Assembly 1 (featuring the extended high-pressure wand) and Assembly 2 (featuring the foam detergent reservoir).
+  </li>
+  <li>
+    <strong>Exploded Assembly Views & Parts List:</strong>
+    Creating detailed exploded views with dashed assembly routing lines, numbered balloon callouts, and structured Bill of Materials (BOM) tables.
+  </li>
+  <li>
+    <strong>3DS Max Kinematic Animations:</strong>
+    Producing three cinematic animations: a 360-degree turntable beauty reel, an exploded disassembly sequence, and an operational spray demonstration.
+  </li>
+  <li>
+    <strong>Additional Deliverables:</strong>
+    Fabrication of a scaled 3D-printed model of the final assembly, a large-format technical marketing poster, and preliminary structural FEA stress and kinematic analysis.
+  </li>
+</ol>
+
+<h3>Planned Deliverables & Upcoming Updates</h3>
+<p>
+As modeling and rendering progress, the following technical assets will be published on this page:
+</p>
+<ul>
+  <li>Interactive Sketchfab 3D models of the completed shell assembly and full product configurations</li>
+  <li>High-resolution shaded and wireframe isometric orthographic drawing sheets</li>
+  <li>Cinematic 3ds Max animation video clips demonstrating assembly and operation</li>
+  <li>Complete engineering design report and downloadable CAD assembly archives (.zip)</li>
+</ul>`,
+
+    media: [
+      { type: "image", src: "assets/media/images/cordless-powercleaner1.jpg", label: "Cordless Power Cleaner to be reverse engineered" },
+    ],
+
+    attachments: [
+      { label: "SolidWorks Assembly Files (.zip) [Coming Soon]", src: "" }
+    ]
   }
 ];
 
