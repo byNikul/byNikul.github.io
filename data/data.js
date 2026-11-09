@@ -375,7 +375,7 @@ This project strengthened my ability to think beyond CAD modeling and focus on m
     progress: "in-progress",
     years: [2026],
     tags: ["cad", "fea", "matlab", "simulink", "research"],
-    thumbnail: "assets/thumbnails/cubesat-digital-twin.png",
+    thumbnail: "assets/thumbnails/cubesat-digital-twin.jpeg",
 
     summary:
       "An end-to-end 3U CubeSat digital twin integrating SOLIDWORKS structural CAD, closed-loop MATLAB orbital dynamics, discrete ADCS flight software, and real-time 3D telemetry visualization.",
